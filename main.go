@@ -3,11 +3,11 @@ package main
 import (
 	"log"
 	"net/http"
+	"os"
 	"sync"
 
 	"github.com/gin-gonic/gin"
 )
-
 
 type Product struct {
 	ID          string  `json:"id"`
@@ -151,8 +151,13 @@ func main() {
 	}
 
 	// Start the server
-	log.Println("Server started on :8080")
-	if err := router.Run(":8080"); err != nil {
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+	}
+
+	log.Println("Server started on port", port)
+	if err := router.Run(":" + port); err != nil {
 		log.Fatalf("Server failed to start: %v", err)
 	}
 }
