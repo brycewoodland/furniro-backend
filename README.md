@@ -6,9 +6,9 @@ A simple RESTful API for managing products in the Furniro project, built with Go
 
 - Get all products: `GET /api/products`
 - Get product by ID: `GET /api/products/:id`
-- Add new product: `POST /api/products`
-- Update product: `PUT /api/products/:id`
-- Delete product: `DELETE /api/products/:id`
+- Add new product: 
+- Update product: 
+- Delete product: 
 - CORS enabled for frontend: `https://furniro-project-bryce.netlify.app`
 
 ## Product Structure 
